@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <main class="h-screen w-screen bg-slate-700 flex flex-col">
+        <div class="flex flex-row justify-between h-full">
+            <div class="flex flex-col gap-[10px]">
+                <div id="ahorcado" class="h-[222px] w-[200px] bg-[url('./Assets/hangman-game_pm-1024x212.png')]">
+                </div>
+                <div class="w-full text-center">
+                    <button id="clear"
+                        class="px-[15px] py-[10px] text-white bg-slate-500 rounded-md hover:bg-slate-600">
+                        Reset
+                    </button>
+                    <button id="next" class="px-[15px] py-[10px] text-white bg-slate-500 rounded-md hover:bg-slate-600">
+                        Next
+                    </button>
+                </div>
+            </div>
+
+            <div class="p-[20px] flex flex-col">
+                <input  maxlength="1" type="text" id="search" class="
+                outline-none text-[#E5E7E9] p-[10px] bg-slate-500 placeholder:text-[#E5E7E9] rounded-md"
+                    placeholder="type a letter">
+                <input hidden  type="text" id="wordfull" class="
+                    outline-none text-[#E5E7E9] p-[10px] bg-slate-500 placeholder:text-[#E5E7E9] rounded-md"
+                    placeholder="type a word">
+
+                <h3 id="output" class="self-center mt-[20px] text-[#E5E7E9] p-[10px]"></h3>
+                <button id="palabraCompleta"
+                    class="mt-[1rem] px-[15px] py-[10px] text-white bg-slate-500 rounded-md hover:bg-slate-600">
+                    Palabra Completa
+                </button>
+                <button hidden id="letra"
+                    class="mt-[1rem] px-[15px] py-[10px] text-white bg-slate-500 rounded-md hover:bg-slate-600">
+                    letra
+                </button>
+            </div>
+
+        </div>
+        <div class="w-full flex gap-[1rem] p-[1rem]">
+            <div class="flex flex-col gap-[1rem] w-[40rem]">
+                <h1 class="text-slate-400 text-xl font-extrabold">Historial de letras y palabras</h1>
+                <div>
+                    <p id="historial" class="flex text-[3rem] text-white font-bold text-justify"></p>
+                </div>
+            </div>
+            <div class="flex  w-full justify-center items-center">
+                <p id="resultado" class="text-[80px] text-center"></p>
+            </div>
+        </div>
+        
+    </main>
+
+    <script src="./config.js"></script>
+</body>
+
+</html>
